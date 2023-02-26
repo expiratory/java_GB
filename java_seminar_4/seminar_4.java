@@ -11,29 +11,31 @@ public class seminar_4 {
         phoneBook.put("mrfeynman", 789123);
         menu(phoneBook);
     }
-    static public void menu(HashMap<String, Integer> map){
+
+    static public void menu(HashMap<String, Integer> map) {
         System.out.println(map);
         Scanner in = new Scanner(System.in);
         System.out.println("Введите номер действия:\n"
-                         + "1. Добавить номер\n"
-                         + "2. Удалить номер\n"
-                         + "3. Поиск по логину\n");
+                + "1. Добавить номер\n"
+                + "2. Удалить номер\n"
+                + "3. Поиск по логину\n");
         int choise = in.nextInt();
-        if (choise == 1){
+        if (choise == 1) {
             addNumber(map);
         }
-        if (choise == 2){
+        if (choise == 2) {
             removeNumber(map);
         }
-        if (choise == 3){
+        if (choise == 3) {
             findLogin(map);
         }
-        if (choise < 1 && choise > 3){
+        if (choise < 1 && choise > 3) {
             System.out.println("Неверный ввод");
         }
         in.close();
     }
-    static public void addNumber(HashMap<String, Integer> map){
+
+    static public void addNumber(HashMap<String, Integer> map) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите логин: ");
         String name = in.nextLine();
@@ -43,7 +45,8 @@ public class seminar_4 {
         System.out.println(map);
         in.close();
     }
-    static public void removeNumber(HashMap<String, Integer> map){
+
+    static public void removeNumber(HashMap<String, Integer> map) {
         System.out.println(map);
         Scanner in = new Scanner(System.in);
         System.out.println("Введите логин, который хотите удалить: ");
@@ -52,14 +55,15 @@ public class seminar_4 {
         System.out.println(map);
         in.close();
     }
-    static public void findLogin(HashMap<String, Integer> map){
+
+    static public void findLogin(HashMap<String, Integer> map) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите логин, который хотите найти: ");
         String name = in.nextLine();
-        if (map.containsKey(name) == true){
+        if (map.containsKey(name) == true) {
             System.out.println(map.get(name));
         }
-        if (map.containsKey(name) == false){
+        if (map.containsKey(name) == false) {
             System.out.println("Такого логина нет");
         }
         in.close();
