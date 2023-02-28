@@ -53,7 +53,6 @@ public class seminar_5 {
     }
 
     static public void subArrayMaxLen(ArrayList<ArrayList<Integer>> arr1, ArrayList<ArrayList<Integer>> arr2) {
-        Set<ArrayList<Integer>> numsOne = new HashSet<ArrayList<Integer>>(arr1);
         Set<ArrayList<Integer>> numsTwo = new HashSet<ArrayList<Integer>>(arr2);
         Set<ArrayList<Integer>> intersection = new HashSet<ArrayList<Integer>>(arr1);
         intersection.retainAll(numsTwo);
